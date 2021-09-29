@@ -60,7 +60,7 @@ This is quite useful for some server programs that never exit，or leak problems
 
 # Integration into other projects:
 
-1. compile: -I/lib -L/lib -lbt
+1. compile: -I/include -L/lib -lbt -lmempool
 2. include file "membt.h"
 3. insert init_bt() in main() or init funtion
 4. insert record_bt() in malloc position
