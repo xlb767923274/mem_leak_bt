@@ -51,6 +51,10 @@ $(OBJECTS):%.o:%.c
 	$(CXX) -c $< -o $@ $(EXTRA_FLAGS) $(CFLAGS)
 
 $(SUBDIRS):ECHO
+	test -d ${SRC_DIR} || mkdir ${SRC_DIR}
+	test -d ${BIN_DIR} || mkdir ${BIN_DIR}
+	test -d ${LIB_DIR} || mkdir ${LIB_DIR}
+	test -d include || mkdir include
 	+$(MAKE) -C $@ $(CFLAGS) $1
 ECHO:
 	@echo $(SUBDIRS)
