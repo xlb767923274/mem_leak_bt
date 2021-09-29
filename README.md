@@ -75,7 +75,9 @@ You can adjust these parameters to suit your environment
 src/tbacktrace/membt.h
 
 #define MEMPOOL_SIZE (1024 * 1024 * 50)     // 50M, mempool ，used for saving backtrace
+
 #define TIME_TO_MAYBE_MEMLEAK  (60)     // seconds ： Memory not released after this time
+
 #define TIME_TO_PRINT_BUFSTATE (20)     // seconds： Interval time to dump log
 
 # others
